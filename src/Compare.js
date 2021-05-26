@@ -10,18 +10,18 @@ class CompareScreen extends Component {
     }
 
     add_to_compare_table = (item, index) => {
-        const { compare_data } = this.state
         let dataCopy = this.state.data
         dataCopy[index]['compare'] = true
-        compare_data.push(item)
-        this.setState({ compare_data: compare_data, data: dataCopy })
+        let compare_dataCopy = this.state.compare_data
+        compare_dataCopy.push(item)
+        this.setState({ compare_data: compare_dataCopy, data: dataCopy })
     }
 
     remove_from_compare_table = (item, index) => {
-        const { compare_data } = this.state
         let dataCopy = this.state.data
         dataCopy[index]['compare'] = false
-        var deleted_data = compare_data.filter(row => row['id'] !== item['id'])
+        let compare_dataCopy = this.state.compare_data
+        var deleted_data = compare_dataCopy.filter(row => row['id'] !== item['id'])
         this.setState({ compare_data: deleted_data, data: dataCopy })
     }
 
