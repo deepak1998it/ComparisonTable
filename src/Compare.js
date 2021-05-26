@@ -51,7 +51,7 @@ class CompareScreen extends Component {
                     {
                         this.state.data.map((item, index) =>
                             <div style={{ padding: '5px', paddingRight: '5px' }} key={index} className="col-md-2">
-                                <div class="card" style={{ width: '11rem' }}>
+                                <div class="card" >
                                     <img src={item['url']} class="card-img-top" alt="..." />
                                     <div class="card-body">
                                         {
